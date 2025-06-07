@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u043F\u0440\u043E\u0433\u0430 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\sem 2 k 2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0BF242EE-F08C-4236-AAEB-014E016D9E72}|sem 2 k 2.csproj|d:\\\u043F\u0440\u043E\u0433\u0430 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\sem 2 k 2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BF242EE-F08C-4236-AAEB-014E016D9E72}|sem 2 k 2.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0433\u0430 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\sem 2 k 2\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0433\u0430 \u043F\u0440\u043E\u0435\u043A\u0442\u044B\\sem 2 k 2\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAgwMMAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-16T19:58:05.697Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

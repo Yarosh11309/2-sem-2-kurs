@@ -1,0 +1,34 @@
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\sem 2 k 2.GeneratedMSBuildEditorConfig.editorconfig
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\sem 2 k 2.AssemblyInfoInputs.cache
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\sem 2 k 2.AssemblyInfo.cs
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\sem 2 k 2.csproj.CoreCompileInputs.cache
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\sem 2 k 2.MvcApplicationPartsAssemblyInfo.cache
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\sem 2 k 2.RazorAssemblyInfo.cache
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\sem 2 k 2.RazorAssemblyInfo.cs
+D:\прога проекты\sem 2 k 2\bin\Debug\net8.0\appsettings.Development.json
+D:\прога проекты\sem 2 k 2\bin\Debug\net8.0\appsettings.json
+D:\прога проекты\sem 2 k 2\bin\Debug\net8.0\sem 2 k 2.staticwebassets.runtime.json
+D:\прога проекты\sem 2 k 2\bin\Debug\net8.0\sem 2 k 2.staticwebassets.endpoints.json
+D:\прога проекты\sem 2 k 2\bin\Debug\net8.0\sem 2 k 2.exe
+D:\прога проекты\sem 2 k 2\bin\Debug\net8.0\sem 2 k 2.deps.json
+D:\прога проекты\sem 2 k 2\bin\Debug\net8.0\sem 2 k 2.runtimeconfig.json
+D:\прога проекты\sem 2 k 2\bin\Debug\net8.0\sem 2 k 2.dll
+D:\прога проекты\sem 2 k 2\bin\Debug\net8.0\sem 2 k 2.pdb
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\scopedcss\bundle\sem 2 k 2.styles.css
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\scopedcss\projectbundle\sem 2 k 2.bundle.scp.css
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\staticwebassets.build.json
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\staticwebassets.development.json
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\staticwebassets\msbuild.sem 2 k 2.Microsoft.AspNetCore.StaticWebAssets.props
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\staticwebassets\msbuild.sem 2 k 2.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\staticwebassets\msbuild.build.sem 2 k 2.props
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.sem 2 k 2.props
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.sem 2 k 2.props
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\staticwebassets.pack.json
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\sem 2 k 2.dll
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\refint\sem 2 k 2.dll
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\sem 2 k 2.pdb
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\sem 2 k 2.genruntimeconfig.cache
+D:\прога проекты\sem 2 k 2\obj\Debug\net8.0\ref\sem 2 k 2.dll
