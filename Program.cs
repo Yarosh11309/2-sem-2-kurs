@@ -1,5 +1,7 @@
 using System.IO;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using sem_2_k_2.Services;
 
 namespace sem_2_k_2
 {
@@ -11,6 +13,10 @@ namespace sem_2_k_2
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSingleton<IProductService, InMemoryProductService>();
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options => options.LoginPath = "/Account/Login");
+            builder.Services.AddAuthorization();
 
             var app = builder.Build();
 
@@ -44,6 +50,7 @@ namespace sem_2_k_2
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

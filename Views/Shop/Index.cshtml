@@ -1,0 +1,56 @@
+@model IEnumerable<sem_2_k_2.Models.Product>
+@{
+    ViewData["Title"] = "Shop";
+}
+<h2>Shop</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            @if (User.Identity?.IsAuthenticated ?? false)
+            {
+                <th>Actions</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                @if (User.Identity?.IsAuthenticated ?? false)
+                {
+                    <td>
+                        <form asp-action="Delete" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+@if (User.Identity?.IsAuthenticated ?? false)
+{
+    <h3>Add Product</h3>
+    <form asp-action="Add" method="post">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input type="number" step="0.01" name="price" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+}
+else
+{
+    <a asp-controller="Account" asp-action="Login">Login as admin to manage products</a>
+}
