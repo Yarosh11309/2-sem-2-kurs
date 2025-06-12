@@ -855,8 +855,18 @@
     $(".btn").on("mouseleave", function() {
         cursor.removeClass("active");
         follower.removeClass("active");
-    });   
+    });
     // CURSOR End
+
+    // redirect connect buttons to login
+    $('a.btn-main').filter(function(){
+        return $(this).find('span:last').text().trim().toLowerCase() === 'connect';
+    }).attr('href','login.html').on('click', function(e){ e.preventDefault(); window.location.href='login.html'; });
+
+    // remove Home tab from menu
+    $('.navbar-nav > li').filter(function(){
+        return $(this).children('a').first().text().trim().toLowerCase() === 'home';
+    }).remove();
 
 
 })(jQuery);
