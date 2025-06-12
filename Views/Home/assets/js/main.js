@@ -861,7 +861,7 @@
     // redirect connect buttons to login
     $('a.btn-main').filter(function(){
         return $(this).find('span:last').text().trim().toLowerCase() === 'connect';
-    }).attr('href','login.html').on('click', function(e){ e.preventDefault(); window.location.href='login.html'; });
+    }).attr('href','/login.html').on('click', function(e){ e.preventDefault(); window.location.href='/login.html'; });
 
     // remove Home tab from menu
     $('.navbar-nav > li').filter(function(){
