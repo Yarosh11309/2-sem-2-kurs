@@ -123,13 +123,22 @@
                             <path d="M0 0V3H24V0H0ZM24 21H16V18H24V21ZM24 12H8V9H24V12Z" fill="#fff" />
                         </svg>
                     </button>
-                    <a class="btn btn-main style-small" href="/login.html">
+                    <a class="btn btn-main style-small connect-btn" href="/login.html">
                         <span>
                             <span>
                                 <img src="assets/img/btn-arrow.png" alt="img">
                                 ~  
                             </span>
                             <span>connect</span>
+                        </span>
+                    </a>
+                    <a class="btn btn-main style-small logout-btn d-none" href="#">
+                        <span>
+                            <span>
+                                <img src="assets/img/btn-arrow.png" alt="img">
+                                ~
+                            </span>
+                            <span>logout</span>
                         </span>
                     </a>
                 </div>
@@ -205,7 +214,7 @@
                                 <input type="password" placeholder="Password">
                                 <span><img src="assets/img/icon/18.png" alt="img"></span>
                             </div>
-                            <a class="btn btn-base tt-uppercase w-100" href="#">Log in</a>
+                            <button id="login-button" class="btn btn-base tt-uppercase w-100">Log in</button>
                             <div class="text-md-end mt-4 tt-uppercase">
                                 <button class="bg-transparent border-0 text-white" type="submit">forget your password</button>
                             </div>
