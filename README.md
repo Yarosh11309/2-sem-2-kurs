@@ -2,6 +2,13 @@
 
 This project is an ASP.NET Core web application. The repository now includes a SQLite database and Docker configuration for running the site.
 
+The codebase follows a simplified **Clean Architecture**:
+
+- **Domain** – entity models used across the application
+- **Application** – interfaces and services containing business logic
+- **Infrastructure** – Entity Framework Core data context and repository implementations
+- **Controllers/Views** – ASP.NET Core MVC UI layer
+
 ## Database
 
 The application uses Entity Framework Core with SQLite. Two tables are created on startup:

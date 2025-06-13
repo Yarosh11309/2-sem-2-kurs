@@ -1,6 +1,10 @@
 using Microsoft.Extensions.FileProviders;
 using Microsoft.EntityFrameworkCore;
-using sem_2_k_2.Models;
+using sem_2_k_2.Application.Interfaces;
+using sem_2_k_2.Application.Services;
+using sem_2_k_2.Domain.Entities;
+using sem_2_k_2.Infrastructure.Data;
+using sem_2_k_2.Infrastructure.Repositories;
 using System.IO;
 
 namespace sem_2_k_2
@@ -15,6 +19,10 @@ namespace sem_2_k_2
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddScoped<IProductRepository, ProductRepository>();
+            builder.Services.AddScoped<ITournamentRepository, TournamentRepository>();
+            builder.Services.AddScoped<ProductService>();
+            builder.Services.AddScoped<TournamentService>();
 
             var app = builder.Build();
 

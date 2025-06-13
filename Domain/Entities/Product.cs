@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace sem_2_k_2.Models
+namespace sem_2_k_2.Domain.Entities
 {
     public class Product
     {

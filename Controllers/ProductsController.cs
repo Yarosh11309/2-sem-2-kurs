@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using sem_2_k_2.Models;
+using sem_2_k_2.Application.Services;
+using sem_2_k_2.Domain.Entities;
 
 namespace sem_2_k_2.Controllers
 {
@@ -8,30 +8,26 @@ namespace sem_2_k_2.Controllers
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
-        private readonly AppDbContext _context;
-        public ProductsController(AppDbContext context)
+        private readonly ProductService _service;
+        public ProductsController(ProductService service)
         {
-            _context = context;
+            _service = service;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Product>> Get() => await _context.Products.ToListAsync();
+        public async Task<IEnumerable<Product>> Get() => await _service.GetProductsAsync();
 
         [HttpPost]
         public async Task<ActionResult<Product>> Post(Product product)
         {
-            _context.Products.Add(product);
-            await _context.SaveChangesAsync();
+            await _service.AddProductAsync(product);
             return CreatedAtAction(nameof(Post), new { id = product.Id }, product);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var entity = await _context.Products.FindAsync(id);
-            if (entity == null) return NotFound();
-            _context.Products.Remove(entity);
-            await _context.SaveChangesAsync();
+            await _service.DeleteProductAsync(id);
             return NoContent();
         }
     }

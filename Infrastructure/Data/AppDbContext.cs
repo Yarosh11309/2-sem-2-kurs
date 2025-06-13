@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace sem_2_k_2.Models
+using sem_2_k_2.Domain.Entities;
+
+namespace sem_2_k_2.Infrastructure.Data
 {
     public class AppDbContext : DbContext
     {

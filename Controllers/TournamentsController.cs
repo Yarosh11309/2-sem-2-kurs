@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using sem_2_k_2.Models;
+using sem_2_k_2.Application.Services;
+using sem_2_k_2.Domain.Entities;
 
 namespace sem_2_k_2.Controllers
 {
@@ -8,30 +8,26 @@ namespace sem_2_k_2.Controllers
     [Route("api/[controller]")]
     public class TournamentsController : ControllerBase
     {
-        private readonly AppDbContext _context;
-        public TournamentsController(AppDbContext context)
+        private readonly TournamentService _service;
+        public TournamentsController(TournamentService service)
         {
-            _context = context;
+            _service = service;
         }
 
         [HttpGet]
-        public async Task<IEnumerable<Tournament>> Get() => await _context.Tournaments.ToListAsync();
+        public async Task<IEnumerable<Tournament>> Get() => await _service.GetTournamentsAsync();
 
         [HttpPost]
         public async Task<ActionResult<Tournament>> Post(Tournament t)
         {
-            _context.Tournaments.Add(t);
-            await _context.SaveChangesAsync();
+            await _service.AddTournamentAsync(t);
             return CreatedAtAction(nameof(Post), new { id = t.Id }, t);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var entity = await _context.Tournaments.FindAsync(id);
-            if (entity == null) return NotFound();
-            _context.Tournaments.Remove(entity);
-            await _context.SaveChangesAsync();
+            await _service.DeleteTournamentAsync(id);
             return NoContent();
         }
     }
