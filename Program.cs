@@ -1,3 +1,6 @@
+using Microsoft.Extensions.FileProviders;
+using System.IO;
+
 namespace sem_2_k_2
 {
     public class Program
@@ -21,6 +24,11 @@ namespace sem_2_k_2
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Views", "Home")),
+                RequestPath = ""
+            });
 
             app.UseRouting();
 
