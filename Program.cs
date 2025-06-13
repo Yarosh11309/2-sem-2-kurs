@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using sem_2_k_2.Models;
+using System.Linq;
+
 namespace sem_2_k_2
 {
     public class Program
@@ -8,6 +12,8 @@ namespace sem_2_k_2
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<sem_2_k_2.Models.AppDbContext>(options =>
+                options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
@@ -29,6 +35,21 @@ namespace sem_2_k_2
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+                db.Database.EnsureCreated();
+                if (!db.Items.Any())
+                {
+                    db.Items.AddRange(new[]
+                    {
+                        new Item { Name = "Demo Item 1" },
+                        new Item { Name = "Demo Item 2" }
+                    });
+                    db.SaveChanges();
+                }
+            }
 
             app.Run();
         }
