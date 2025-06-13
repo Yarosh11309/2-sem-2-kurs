@@ -857,6 +857,33 @@
         follower.removeClass("active");
     });   
     // CURSOR End
+    /* login state */
+    var loggedInKey = 'isLoggedIn';
+    function updateAuthUI() {
+        var logged = localStorage.getItem(loggedInKey) === 'true';
+        if (logged) {
+            $('.logout-btn').removeClass('d-none');
+            $('.connect-btn').each(function() {
+                $(this).html('<img src="assets/img/icon/17.png" alt="img">').attr('href', '#');
+            });
+        } else {
+            $('.logout-btn').addClass('d-none');
+            $('.connect-btn').each(function() {
+                $(this).html('<span><span><img src="assets/img/btn-arrow.png" alt="img">~</span><span>connect</span></span>').attr('href', '/login.html');
+            });
+        }
+    }
+    updateAuthUI();
+    $(document).on('click', '#login-button', function(e) {
+        e.preventDefault();
+        localStorage.setItem(loggedInKey, 'true');
+        window.location.href = 'index.html';
+    });
+    $(document).on('click', '.logout-btn', function(e) {
+        e.preventDefault();
+        localStorage.removeItem(loggedInKey);
+        updateAuthUI();
+    });
 
 
 })(jQuery);
