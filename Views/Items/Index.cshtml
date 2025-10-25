@@ -1,0 +1,12 @@
+@model IEnumerable<sem_2_k_2.Models.Item>
+
+@{
+    ViewData["Title"] = "Items";
+}
+<h1>Items</h1>
+<ul>
+@foreach (var item in Model)
+{
+    <li>@item.Name</li>
+}
+</ul>
